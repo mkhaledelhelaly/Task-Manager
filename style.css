@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url(./imgs/stickynotebg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 38px;
+}
+
+/* Task Input Section */
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.task-input button {
+    padding: 10px 20px;
+    background-color: #2d743d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.task-input button:hover {
+    background-color: #35b851;
+}
+
+/* Task List */
+#task-list {
+    list-style: none;
+}
+
+#task-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#task-list li .task-text {
+    flex-grow: 1;
+    /* Ensures the task text takes up available space */
+}
+
+#task-list li.completed span {
+    text-decoration: line-through;
+    text-decoration-color: gray;
+    text-decoration-thickness: 2px;
+    color: black;
+}
+
+#task-list button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 0;
+
+}
+
+.tick {
+    color: green;
+}
+
+.cross {
+    color: red;
+}
+
+
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#task-counter {
+    font-weight: bold;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filters .filter {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+
+#filter-all {
+    background-color: lightgray;
+}
+
+#filter-all:hover {
+    background-color: gray;
+}
+
+#filter-active {
+    background-color: lightgreen;
+}
+
+#filter-active:hover {
+    background-color: #67b932;
+}
+
+#filter-completed {
+    background-color: lightcoral;
+}
+
+#filter-completed:hover {
+    background-color: red;
+}
+
+#clear-completed {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#clear-completed:hover {
+    background-color: lightcoral;
+}
